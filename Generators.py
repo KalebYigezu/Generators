@@ -24,3 +24,18 @@ names = get_names("Names.txt")
 
 print(next(names))
 
+----------------- Fib ---------------------
+
+def fib(num):
+    a, b = 0, 1
+    while b < num:
+        yield b
+        a, b = b, a + b
+
+
+x = fib(200)
+
+
+for i in x:
+    print(i)
+
